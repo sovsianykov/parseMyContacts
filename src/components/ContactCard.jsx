@@ -26,13 +26,12 @@ const useStyles = makeStyles({
 
 export default function ContactCard({contact ,FirstName}) {
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
 
     return (
         <Card className={classes.root} variant="outlined">
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-
+                 <ContactsIcon/>
                 </Typography>
                 <Typography variant="h5" component="h2">
                     {contact["Last Name"]}
@@ -43,9 +42,13 @@ export default function ContactCard({contact ,FirstName}) {
                 <Typography className={classes.pos} color="textSecondary" >
                     <br/>
                     <PhoneAndroidOutlinedIcon/>
-                    {contact["Mobile Phone"]}
+                    {contact["Mobile Phone" ]}
+                    <br/>
+                    {contact["Home Phone" ]}<br/>
+                    {contact["Primary Phone" ]}
                 </Typography>
                 <Typography variant="body2" component="p">
+                    {contact["E-mail Address"]}
                 </Typography>
             </CardContent>
             <CardActions>
