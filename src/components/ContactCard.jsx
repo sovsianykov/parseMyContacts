@@ -24,12 +24,12 @@ const useStyles = makeStyles({
     },
 });
 
-export default function ContactCard({contact ,FirstName}) {
+export default function ContactCard({contact}) {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root} variant="outlined">
-            <CardContent>
+        <Card className={classes.root} variant="outlined" >
+            <CardContent className='norm'>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
                  <ContactsIcon/>
                 </Typography>
